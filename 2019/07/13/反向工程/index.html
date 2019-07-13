@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/6 | Hexo</title>
+  <title>Reverse Engineering | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2019/06/index.html">
+  <meta name="description" content="反向工程下面以反向工程的思路进行分析 分析设计时的工具使用与文档要求 工具 分析用：纸、笔 整理用：电脑  简易工具 画图板、Word……  专业工具 Axure （原型工具，用于画 Demo 原型） Visio （图表绘制工具，可用于流程图、数据库模型图、UML的绘制等） PowerDesigner （数据库建模工具，主要用于数据库建模，同样可用于流程图、UML的绘制）    文档  开发文档">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Reverse Engineering">
+<meta property="og:url" content="http://yoursite.com/2019/07/13/反向工程/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="反向工程下面以反向工程的思路进行分析 分析设计时的工具使用与文档要求 工具 分析用：纸、笔 整理用：电脑  简易工具 画图板、Word……  专业工具 Axure （原型工具，用于画 Demo 原型） Visio （图表绘制工具，可用于流程图、数据库模型图、UML的绘制等） PowerDesigner （数据库建模工具，主要用于数据库建模，同样可用于流程图、UML的绘制）    文档  开发文档">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-13T02:08:58.973Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Reverse Engineering">
+<meta name="twitter:description" content="反向工程下面以反向工程的思路进行分析 分析设计时的工具使用与文档要求 工具 分析用：纸、笔 整理用：电脑  简易工具 画图板、Word……  专业工具 Axure （原型工具，用于画 Demo 原型） Visio （图表绘制工具，可用于流程图、数据库模型图、UML的绘制等） PowerDesigner （数据库建模工具，主要用于数据库建模，同样可用于流程图、UML的绘制）    文档  开发文档">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,49 +154,314 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-反向工程" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/29/hello-world/" class="archive-article-date">
-  	<time datetime="2019-06-29T15:58:18.759Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-29</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/29/hello-world/">Hello World</a>
+    <h1 class="article-title" itemprop="name">
+      Reverse Engineering
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2019/07/13/反向工程/" class="archive-article-date">
+  	<time datetime="2019-07-13T02:04:19.236Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="反向工程"><a href="#反向工程" class="headerlink" title="反向工程"></a>反向工程</h1><p>下面以反向工程的思路进行分析</p>
+<h4 id="分析设计时的工具使用与文档要求"><a href="#分析设计时的工具使用与文档要求" class="headerlink" title="分析设计时的工具使用与文档要求"></a>分析设计时的工具使用与文档要求</h4><ul>
+<li><p>工具</p>
+<p>分析用：纸、笔</p>
+<p>整理用：电脑</p>
+<ul>
+<li><p>简易工具</p>
+<p>画图板、Word……</p>
+</li>
+<li><p>专业工具</p>
+<p>Axure （原型工具，用于画 Demo 原型）</p>
+<p>Visio （图表绘制工具，可用于流程图、数据库模型图、UML的绘制等）</p>
+<p>PowerDesigner （数据库建模工具，主要用于数据库建模，同样可用于流程图、UML的绘制）</p>
+</li>
+</ul>
+</li>
+<li><p>文档</p>
+<ul>
+<li><p>开发文档</p>
+<p><strong>这是必须的！而且要达到以下的作用：</strong></p>
+<p>1） 完整的系统设计，能指导工程师的编码实现工作</p>
+<p>2） 开发时一些关键的实现记录（如实现方案、问题等），能在项目交接的时候，让接手人员快速掌握项目情况</p>
+</li>
+<li><p>其他标准的项目文档</p>
+<p>行业、国家、企业或客户对整个软件过程中的文档产出要求，譬如，各个阶段要有不同的产出，文档格式、内容的规范等。</p>
+<p>一般来说，可以将开发文档按要求去整理、补充成为标准的项目文档。</p>
+<p><u><em>很多时候，是为了业务需要或客户要求，或者，就是多余，浪费成本</em></u></p>
+</li>
+</ul>
+</li>
+</ul>
+<h6 id="下面主要讨论必要的开发文档——"><a href="#下面主要讨论必要的开发文档——" class="headerlink" title="下面主要讨论必要的开发文档——"></a>下面主要讨论必要的开发文档——</h6><p>开发文档整理方案（建议采用方案二）：</p>
+<ul>
+<li><p>方案一： 各个阶段都有不同的文档产出，分别存放</p>
+<p><u><em>但这样不利于整理与分析，因为要来回对比不同文档中的内容。</em></u></p>
+</li>
+<li><p>方案二： 各个阶段产出一个文档版本，新版本是基于上一个版本进行升级</p>
+<p>1） 升级之前，直接复制、粘贴、重命名（加上版本号），以<strong>保留</strong>上一个版本（包括附件都有版本保留）</p>
+<p>2） 升级包括：内容新增；内容更新（包括进一步的整理，问题解决等）</p>
+<p><u><em>因此，当前阶段有问题的地方，可用高亮的字体标注，待下一个阶段确认、解决。</em></u></p>
+</li>
+</ul>
+<h4 id="“适合我们”的软件开发过程"><a href="#“适合我们”的软件开发过程" class="headerlink" title="“适合我们”的软件开发过程"></a>“适合我们”的软件开发过程</h4><p>软件设计原则：</p>
+<ul>
+<li>设计的时候不要考虑怎么实现！</li>
+<li>注重用户体验！</li>
+</ul>
+<p><em>场景分析：某一天，有一个客户通过某种途径联系了你，想委托你们团队去开发一个项目产品（或者自己想开发一个产品，那么客户就是你自己），那第一步应该怎么做呢？</em></p>
+<hr>
+<h5 id="1-需求收集"><a href="#1-需求收集" class="headerlink" title="1.需求收集"></a>1.需求收集</h5><h6 id="1-1-先让客户按照自己的想法，根据以下的纲要，尽量清楚、完整地写一份原始的需求文档，写完之后提交"><a href="#1-1-先让客户按照自己的想法，根据以下的纲要，尽量清楚、完整地写一份原始的需求文档，写完之后提交" class="headerlink" title="1.1 先让客户按照自己的想法，根据以下的纲要，尽量清楚、完整地写一份原始的需求文档，写完之后提交"></a>1.1 先让客户按照自己的想法，根据以下的纲要，尽量清楚、完整地写一份原始的需求文档，写完之后提交</h6><p><u><em>注意： 通俗易懂，以<strong>问题</strong>的形式作为引导！</em></u></p>
+<p>【一、系统概述】</p>
+<p>问： 现在存在怎样的一个问题/情况？你想做出一个怎样的东西？怎样去解决这个问题？</p>
+<p>【二、用户角色】</p>
+<p>问： 在这个系统与业务中，会有哪些人（用户角色）参与？</p>
+<p>【三、概要需求】</p>
+<p>问：你的业务流程是怎样的？每一种角色，分别用这个系统做什么？怎么做？（有什么功能，流程是怎样的）</p>
+<h6 id="1-2-用户提交上来之后，先稍微根据自己的经验初步分析一下，然后约客户进行细节交流、分析"><a href="#1-2-用户提交上来之后，先稍微根据自己的经验初步分析一下，然后约客户进行细节交流、分析" class="headerlink" title="1.2 用户提交上来之后，先稍微根据自己的经验初步分析一下，然后约客户进行细节交流、分析"></a>1.2 用户提交上来之后，先稍微根据自己的经验初步分析一下，然后约客户进行细节交流、分析</h6><ul>
+<li>尽量面谈，一般来说，由专门的需求人员（岗位）或者项目负责人（项目经理）去负责交流</li>
+<li>准备好纸、笔（分析用），带上用户前面整理的需求文档</li>
+<li>尽量录音记录</li>
+</ul>
+<p>【一、系统概述】</p>
+<p><u><em>跟用户确认</em></u></p>
+<p>【二、用户角色】</p>
+<p><u><em>跟用户确认</em></u></p>
+<p>【三、概要需求】</p>
+<p><u><em>跟用户一起进行逐行分析：</em></u></p>
+<ul>
+<li>系统中每一个用户角色的使用流程，画出“##（用户）-系统使用流程图”</li>
+<li>画出其中的一些<strong>关键界面/页面 Demo 草图 <u><em>（虽然是草图，但是要表达出整个页面的内容）</em></u></strong>，并将用户提到的一些<strong>关键业务描述着重记录</strong>，作为后面详细分析时的基础</li>
+</ul>
+<p><u><em>得到””##（系统）开发文档-v1.0”</em></u></p>
+<ul>
+<li>原始需求文档（开发文档-v1.0）</li>
+<li>##（用户）-系统使用流程图（手稿，扫描/拍照）</li>
+<li>Demo 草图 &amp; 业务描述记录（手稿，扫描/拍照)</li>
+<li>录音</li>
+</ul>
+<blockquote>
+<p>注意： 这些属于原始需求，不能修改！</p>
+</blockquote>
+<p>跟客户交流完成后，就回去进行初步的需求整理与分析</p>
+<hr>
+<h5 id="2-初步需求整理与分析"><a href="#2-初步需求整理与分析" class="headerlink" title="2. 初步需求整理与分析"></a>2. 初步需求整理与分析</h5><h6 id="2-1-进一步整理系统使用流程，放到【三、概要需求】中系统"><a href="#2-1-进一步整理系统使用流程，放到【三、概要需求】中系统" class="headerlink" title="2.1 进一步整理系统使用流程，放到【三、概要需求】中系统"></a>2.1 进一步整理系统使用流程，放到【三、概要需求】中系统</h6><p>1） 按用户角色，分别整理前面的<strong>“##（用户）-系统使用流程图”</strong></p>
+<p>2） 如有需要，把各个用户的分析整理到一起，画出<strong>”系统整体预览图“</strong></p>
+<p>注意：</p>
+<ul>
+<li>原则：表达清晰则可</li>
+<li>可使用 Visio 等工具画流程图</li>
+<li>把整理过程中的所有问题记录，与客户进一步确认</li>
+</ul>
+<h6 id="2-2-进一步与客户确认相关问题"><a href="#2-2-进一步与客户确认相关问题" class="headerlink" title="2.2 进一步与客户确认相关问题"></a>2.2 进一步与客户确认相关问题</h6><h6 id="2-3-根据前面整理的系统使用流程，归纳出【四、功能列表】"><a href="#2-3-根据前面整理的系统使用流程，归纳出【四、功能列表】" class="headerlink" title="2.3 根据前面整理的系统使用流程，归纳出【四、功能列表】"></a>2.3 根据前面整理的系统使用流程，归纳出【四、功能列表】</h6><p><u>前面的流程分析可能是细化的步骤，这里将步骤归纳成对应的功能点。</u></p>
+<h6 id="2-4-根据当前的系统需求、人力、时间，估算工作量，做一份“项目计划”，向客户报价并确认"><a href="#2-4-根据当前的系统需求、人力、时间，估算工作量，做一份“项目计划”，向客户报价并确认" class="headerlink" title="2.4 根据当前的系统需求、人力、时间，估算工作量，做一份“项目计划”，向客户报价并确认"></a>2.4 根据当前的系统需求、人力、时间，估算工作量，做一份“项目计划”，向客户报价并确认</h6><h6 id="2-5-根据系统情况，确定【五、技术架构】"><a href="#2-5-根据系统情况，确定【五、技术架构】" class="headerlink" title="2.5 根据系统情况，确定【五、技术架构】"></a>2.5 根据系统情况，确定【五、技术架构】</h6><p><u>得到“##（系统）开发文档-v2.0</u></p>
+<ul>
+<li>##（用户）-系统使用流程图/系统整体预览图（整理后）</li>
+<li>开发文档-v2.0</li>
+<li>项目计划</li>
+</ul>
+<hr>
+<h5 id="3-功能详细分析与设计"><a href="#3-功能详细分析与设计" class="headerlink" title="3. 功能详细分析与设计"></a>3. 功能详细分析与设计</h5><p><em>上述步骤，需要从整体上把握，不能分工安排，只能分配给 1 个人（或配合很好的搭档）去完成。原则上，整个系统的设计，整个开发文档的编写，最好是由 1-2 个人负责，因为这样思路集中，效果较好。</em></p>
+<p><em>但到了详细分析这一步，由于工作量比较大，考虑到效率问题，多数的团队都选择分工处理，但是要有统一的标准！</em></p>
+<h6 id="3-1-增加【六、功能详细分析与设计】"><a href="#3-1-增加【六、功能详细分析与设计】" class="headerlink" title="3.1 增加【六、功能详细分析与设计】"></a>3.1 增加【六、功能详细分析与设计】</h6><p>在项目负责人的<strong>监督</strong>下，按<strong>功能</strong>分工，分别分析功能列表中各个功能的<strong>4 要素</strong>：</p>
+<ol>
+<li>功能描述/业务流程</li>
+<li>界面 Demo 原型（不需美工，但是要把最终页面的<u>完整效果</u>表达出来，可用 Axure 等工具）</li>
+<li>业务规约（当前功能的一些<u>约束条件与注意事项</u>，如字段输入规范、删除处理方案等）</li>
+<li>业务实体（归纳出当前功能涉及到的<u>数据项</u>）</li>
+</ol>
+<p><em>完成后，可再次与客户进行确认</em></p>
+<p><u>得到“##（系统）开发文档-v3.0”</u></p>
+<ul>
+<li>Demo 原型</li>
+<li>开发文档-v3.0</li>
+</ul>
+<hr>
+<h5 id="4-系统整体设计"><a href="#4-系统整体设计" class="headerlink" title="4. 系统整体设计"></a>4. 系统整体设计</h5><p><em>整体设计，一般来说，还是由项目负责人负责</em></p>
+<h6 id="4-1-功能模块划分，增加【七、模块划分】，并在前面的功能分析前加上【模块名称】的前缀"><a href="#4-1-功能模块划分，增加【七、模块划分】，并在前面的功能分析前加上【模块名称】的前缀" class="headerlink" title="4.1 功能模块划分，增加【七、模块划分】，并在前面的功能分析前加上【模块名称】的前缀"></a>4.1 功能模块划分，增加【七、模块划分】，并在前面的功能分析前加上【模块名称】的前缀</h6><p>把“同一单元”下的功能划分到一个功能模块中，如登录、注册，实际上都属于“用户模块”。</p>
+<p><u>即，1-n 个页面组成一个功能，1-n 个功能组成一个模块。</u></p>
+<h6 id="4-2-增加【八、数据库设计】，并在【六、功能详细分析与设计】中加上第5要素“涉及数据表”"><a href="#4-2-增加【八、数据库设计】，并在【六、功能详细分析与设计】中加上第5要素“涉及数据表”" class="headerlink" title="4.2 增加【八、数据库设计】，并在【六、功能详细分析与设计】中加上第5要素“涉及数据表”"></a>4.2 增加【八、数据库设计】，并在【六、功能详细分析与设计】中加上第5要素“涉及数据表”</h6><ul>
+<li>通过前面的分析，归纳出本系统的数据库，有什么<strong>表</strong>，每个表有什么<strong>字段</strong></li>
+<li>设计完成，必须回头<u>仔细检查</u>，看看当前设计的数据库是否能支持<strong>整个系统的业务</strong>，并考虑其<strong>合理性和效率问题</strong></li>
+<li>可用 Visio 或 PowerDesigner 等工具进行数据库建模（可支持反向生成数据库）</li>
+</ul>
+<p><u>得到“##（系统）开发文档-v4.0”</u></p>
+<ul>
+<li>开发文档-v4.0</li>
+<li>数据库设计</li>
+</ul>
+<hr>
+<h5 id="5-软件架构设计"><a href="#5-软件架构设计" class="headerlink" title="5. 软件架构设计"></a>5. 软件架构设计</h5><h6 id="5-1-在【六、功能详细分析与设计】中加上第-6-要素”软件架构"><a href="#5-1-在【六、功能详细分析与设计】中加上第-6-要素”软件架构" class="headerlink" title="5.1 在【六、功能详细分析与设计】中加上第 6 要素”软件架构"></a>5.1 在【六、功能详细分析与设计】中加上第 6 要素”软件架构</h6><p><u>即每个功能，根据前面的架构设计，进行具体的接口、参数、流程定义</u></p>
+<p><em>此步骤，一般也是分工处理</em></p>
+<h6 id="5-2-调整一下开发文档中各部分的顺序，使阅读起来更顺畅"><a href="#5-2-调整一下开发文档中各部分的顺序，使阅读起来更顺畅" class="headerlink" title="5.2 调整一下开发文档中各部分的顺序，使阅读起来更顺畅"></a>5.2 调整一下开发文档中各部分的顺序，使阅读起来更顺畅</h6><p>【一、系统概述】</p>
+<p>【二、用户角色】</p>
+<p>【三、概要需求】</p>
+<p>【四、技术架构】</p>
+<p>【五、数据库设计】</p>
+<p>【六、模块划分】</p>
+<p>【七、功能列表】</p>
+<p>【八、功能详细分析与设计】</p>
+<p><u>得到“##（系统）开发文档-v5.0”</u></p>
+<ul>
+<li>开发文档-v5.0</li>
+<li>软件架构图</li>
+</ul>
+<hr>
+<h5 id="6-编码实现"><a href="#6-编码实现" class="headerlink" title="6. 编码实现"></a>6. 编码实现</h5><p><em>原则：测试在先！</em></p>
+<p>分工进行编码，一般按<strong>功能</strong>和<strong>逻辑</strong>层次分工。</p>
+<p>创建项目后，一方面，项目负责人先<strong>搭好框架</strong>（包括创建好借口，DAO、DTO模板代码生成等）；另一方面，安排其他开发人员<strong>先完成页面</strong>（完成页面后可先给用户审核）；然后再把<strong>功能</strong>一一实现。</p>
+<p><u>编码实现时，一些<strong>关键实现</strong>和<strong>修正</strong>也要记录到开发文档中！</u></p>
+<hr>
+<h5 id="7-测试-amp-部署"><a href="#7-测试-amp-部署" class="headerlink" title="7. 测试 &amp; 部署"></a>7. 测试 &amp; 部署</h5><p>完成开发后，必须仔细测试：</p>
+<p>1） 开发人员进行功能测试</p>
+<p>2） 部署</p>
+<p>3） 团队内部（非本项目的开发人员）进行功能测试</p>
+<p>4） 利用专业的测试方案进行功能测试、性能测试等（一般由测试部门负责）</p>
+<p>5） 公测（建议从小范围到大范围）</p>
+<p>测试工具相关：</p>
+<p><a href="https://jingyan.baidu.com/article/3f16e0032c88ac2591c10333.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/3f16e0032c88ac2591c10333.html</a></p>
+<hr>
+<h5 id="8-项目总结-amp-归档"><a href="#8-项目总结-amp-归档" class="headerlink" title="8. 项目总结 &amp; 归档"></a>8. 项目总结 &amp; 归档</h5>
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/13/反向工程/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/07/12/软件工程与软件过程/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">软件工程与软件过程</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -215,8 +484,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
